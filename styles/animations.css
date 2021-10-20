@@ -1,0 +1,76 @@
+.nevidljiv {
+  opacity: 0;
+  transform: translateY(10rem);
+  transition: transform 1s, opacity 1s;
+}
+#knowledgeskills {
+  background: linear-gradient(40deg, #1e3a8a, #3b82f6, #1e3a8a);
+  background-size: 1000% 1000%;
+  -webkit-animation: AnimationName 12s ease infinite;
+  -moz-animation: AnimationName 12s ease infinite;
+  animation: AnimationName 12s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 99% 0%;
+  }
+  50% {
+    background-position: 2% 100%;
+  }
+  100% {
+    background-position: 99% 0%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 99% 0%;
+  }
+  50% {
+    background-position: 2% 100%;
+  }
+  100% {
+    background-position: 99% 0%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 99% 0%;
+  }
+  50% {
+    background-position: 2% 100%;
+  }
+  100% {
+    background-position: 99% 0%;
+  }
+}
+header {
+  opacity: 0;
+  transform: translateY(5rem);
+  animation: Ulet 400ms linear forwards;
+}
+h1 {
+  opacity: 0;
+  transform: translateY(5rem);
+  animation: Ulet 400ms linear 400ms forwards;
+}
+h1 {
+  opacity: 0;
+  transform: translateY(5rem);
+  animation: Ulet 400ms linear 400ms forwards;
+}
+.ulets {
+  opacity: 0;
+  transform: translateY(5rem);
+  animation: Ulet 400ms linear 900ms forwards;
+}
+.uletk {
+  opacity: 1;
+  transform: none;
+}
+@keyframes Ulet {
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
