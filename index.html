@@ -36,8 +36,22 @@
                 // these IDs from the previous steps
                 emailjs.sendForm('service_nh28zed','template_r5etx1v', this)
                     .then(function() {
+                      var sveodforma = document.getElementById('contact-form').getElementsByTagName('*');
+                      for (var i=0;i<sveodforma.length;i+=1){
+                      sveodforma[i].style.display = 'none';
+                    }
+                      document.getElementById('messageafter').innerHTML = "Your message has been sent!"+ "<br />"+"<br />"+"Enjoy the rest of your day :)"
+                      document.getElementById('messageafter').style.display = 'block';
+                      document.getElementById('goback').style.display = 'block';
                         console.log('SUCCESS!');
                     }, function(error) {
+                      var sveodforma = document.getElementsById('contact-form').getElementsByTagName('*');
+                      for (var i=0;i<sveodforma.length;i+=1){
+                      sveodforma[i].style.display = 'none';
+                    }
+                    document.getElementById('messageafter').innerHTML = "Your message has not been sent!"+ "<br />"+"<br />"+"Contact Sven later."
+                      document.getElementById('messageafter').style.display = 'block';
+                      document.getElementById('goback').style.display = 'block';
                         console.log('FAILED...', error);
                     });
             });
@@ -259,7 +273,7 @@
 ><input type="hidden" name="contact_number"><label class="pb-3">
   <br><br>&ensp;Your name:<br></label>
     <input class="p-1 bg-blue-700 border-b-4 border-blue-400
-    rounded-r-full focus:outline-none hover:bg-blue-600 focus:bg-blue-500" type="text" name="user_name" maxlength="20" required>
+    rounded-r-full focus:outline-none hover:bg-blue-600 focus:bg-blue-500"type="text" name="user_name" maxlength="20" required>
   <label class="pb-3">
   <br><br>&ensp;Your e-mail:<br></label>
     <input class="p-1 bg-blue-700 border-b-4 border-blue-400
@@ -269,7 +283,16 @@
     <textarea class="p-1 bg-blue-700 border-b-4 border-blue-400
     rounded-r-3xl focus:outline-none hover:bg-blue-600 focus:bg-blue-500" style="resize:none" name="message" cols="25" rows="6" maxlength="125"required></textarea>
   <br><button class="bg-blue-400 p-2 border-2 border-blue-500 hover:bg-blue-300 focus:bg-blue-100 hover:border-1 rounded-full mx-10" type="submit" value="Send">Send</button>
-</form></section>
+<p id="messageafter" class="p-5 my-20 bg-blue-400 rounded-2xl" style="display:none;"></p><button id="goback" 
+onclick="
+document.getElementById('messageafter').style.display = 'none';
+document.getElementById('goback').style.display = 'none';
+document.getElementById('contact-form').reset();
+var sveodforma = document.getElementById('contact-form').getElementsByTagName('*');
+for (var i=0;i<(sveodforma.length-2);i+=1){
+  sveodforma[i].style.display = 'inline-block';
+}"
+class="bg-blue-400 p-2 border-2 border-blue-500 hover:bg-blue-300 focus:bg-blue-100 hover:border-1 rounded-full mx-10 mb-10" style="display:none;">Go back</button></form></section>
     </main>
     <script src="scripts/prati.js"></script>
   </body>
