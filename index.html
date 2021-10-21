@@ -285,13 +285,13 @@
   <br><button class="bg-blue-400 p-2 border-2 border-blue-500 hover:bg-blue-300 focus:bg-blue-100 hover:border-1 rounded-full mx-10" type="submit" value="Send">Send</button>
 <p id="messageafter" class="p-5 my-20 bg-blue-400 rounded-2xl" style="display:none;"></p><button id="goback" 
 onclick="
-document.getElementById('messageafter').style.display = 'none';
-document.getElementById('goback').style.display = 'none';
 document.getElementById('contact-form').reset();
 var sveodforma = document.getElementById('contact-form').getElementsByTagName('*');
-for (var i=0;i<(sveodforma.length-2);i+=1){
+for (var i=0;i<sveodforma.length;i+=1){
   sveodforma[i].style.display = 'inline-block';
-}"
+}
+document.getElementById('messageafter').style.display = 'none';
+document.getElementById('goback').style.display = 'none';"
 class="bg-blue-400 p-2 border-2 border-blue-500 hover:bg-blue-300 focus:bg-blue-100 hover:border-1 rounded-full mx-10 mb-10" style="display:none;">Go back</button></form></section>
     </main>
     <script src="scripts/prati.js"></script>
