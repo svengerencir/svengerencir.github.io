@@ -4,4 +4,4 @@ HTML/CSS/JS
 moje osobne web stranice
 
 adresa:
-https://www.svengerencir.github.io
+https://svengerencir.github.io
