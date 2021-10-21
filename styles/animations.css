@@ -6,12 +6,12 @@
 #knowledgeskills {
   background: linear-gradient(40deg, #1e3a8a, #3b82f6, #1e3a8a);
   background-size: 1000% 1000%;
-  -webkit-animation: AnimationName 12s ease infinite;
-  -moz-animation: AnimationName 12s ease infinite;
-  animation: AnimationName 12s ease infinite;
+  -webkit-animation: setnja 12s ease infinite;
+  -moz-animation: setnja 12s ease infinite;
+  animation: setnja 12s ease infinite;
 }
 
-@-webkit-keyframes AnimationName {
+@-webkit-keyframes setnja {
   0% {
     background-position: 99% 0%;
   }
@@ -22,7 +22,7 @@
     background-position: 99% 0%;
   }
 }
-@-moz-keyframes AnimationName {
+@-moz-keyframes setnja {
   0% {
     background-position: 99% 0%;
   }
@@ -33,7 +33,7 @@
     background-position: 99% 0%;
   }
 }
-@keyframes AnimationName {
+@keyframes setnja {
   0% {
     background-position: 99% 0%;
   }
